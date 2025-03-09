@@ -1,0 +1,166 @@
+.section-heading {
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgba($bordo, 0.4), rgba($bordo, 0.4));
+    position: relative;
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .back-video{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+    }
+
+    
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem 4%;
+
+    background-color: none;
+    transition: all 0.5s;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .img-inicio {
+        height: 5.2rem;
+    }
+
+
+    .navbar-ul {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2.5rem;
+
+        .item-navbar {
+            height: 100%;
+            
+        }
+
+        li {
+            list-style: none;
+            font-family: "Poppins", sans-serif;
+
+            // para que el submenu quede en el centro!
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 1.65rem;
+            color: rgba($color: $amarillo, $alpha: 0.8);
+            font-weight: 750;
+
+            :hover{
+                color: rgba($color: $amarillo, $alpha: 1);
+            }
+            
+            a {
+                text-decoration: none;
+                color: rgba($color: $amarillo, $alpha: 0.8);
+
+                :hover {
+                    color: rgba($color: $amarillo, $alpha: 1);
+                }
+            }
+            
+            
+        }
+
+    }
+}
+
+.header-scrolled {
+    background-color: rgba($color: $bordo, $alpha: 1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+// sistema drop
+
+
+
+.arrow {
+    height: 100%;
+    line-height: 70px;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+
+    color: rgba($color: $amarillo, $alpha: 0.8);
+    :hover {
+        color: rgba($color: $amarillo, $alpha: 1);
+    }
+
+    transition: all 0.3s ease;
+}
+
+.submenu {
+    margin-top: 2rem;
+    position: absolute;
+    top: 70px;
+    z-index: 2;
+    list-style: none;
+    
+    line-height: 40px;
+    li {
+        text-align: center;
+        font-weight: 300 !important;
+        padding: 0 2rem;
+        border-bottom: 1px solid rgba($color: $amarillo, $alpha: 0.5);
+    }
+    
+
+    // 
+    //  background: rgba($color: $bordo, $alpha: 0.55);
+    // box-shadow: 0 1px 2px rgba($color: rgba($bordo, 0.4), $alpha: 0.1);
+    // border-radius: 0 0 10px 10px;
+
+
+    //para el efecto de subir-bajar
+
+    display: grid;
+    grid-template-rows: 0fr; //para que no se vean las rows
+
+    transition: all 0.3s ease-in-out;
+    
+    div {
+        overflow: hidden;
+    }
+    
+}
+
+
+.link_nav--drop {
+    color: rgba($color: $bordo, $alpha: 0.9);
+}
+
+//dropdown
+
+.navbar-ul li:hover .deportes-submenu,
+.navbar-ul li:hover .club-submenu{
+    grid-template-rows: 1fr;
+    background-color: rgba($color: $bordo, $alpha: 0.85);
+ }
+
+//arrow dropdown que gire :)
+
+.navbar-ul li:hover .deportes-arrow,
+.navbar-ul li:hover .club-arrow {
+    transform: rotate(180deg);
+}
