@@ -14,9 +14,9 @@ const headerElMobile = document.querySelector('.nav-mobile');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 25) {
-    headerElMobile.classList.add('header-scrolled')
+    headerElMobile.classList.add('header-scrolled-mobile')
     } else if (window.scrollY <=20) {
-        headerElMobile.classList.remove('header-scrolled') 
+        headerElMobile.classList.remove('header-scrolled-mobile') 
     }
 })
 

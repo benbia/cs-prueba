@@ -184,6 +184,13 @@ nav {
 // media q
 
 @media screen and (max-width: 1280px) {
+
+    .header-scrolled {
+        background-color: transparent;
+        box-shadow: none;
+    
+    }
+    
     .cerrar {
         font-size: 2.5rem;
         color: $amarillo;
@@ -295,8 +302,7 @@ nav {
             z-index: 10001;
         }
     }
-
-    .header-scrolled {
+    .header-scrolled-mobile {
         background-color: rgba($color: $bordo, $alpha: 1);
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     

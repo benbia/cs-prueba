@@ -365,6 +365,10 @@ nav .navbar-ul li a :hover {
 }
 
 @media screen and (max-width: 1280px) {
+  .header-scrolled {
+    background-color: transparent;
+    box-shadow: none;
+  }
   .cerrar {
     font-size: 2.5rem;
     color: #f7b643;
@@ -452,7 +456,7 @@ nav .navbar-ul li a :hover {
     color: #f7b643;
     z-index: 10001;
   }
-  .header-scrolled {
+  .header-scrolled-mobile {
     background-color: #730d32;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
   }
@@ -467,7 +471,7 @@ html {
   /* para que un rem quede en 10 px */
   font-size: 62.5%;
   background-color: white;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   scroll-behavior: smooth;
 }
 
@@ -478,6 +482,10 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */

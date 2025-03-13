@@ -18,7 +18,7 @@ html {
     /* para que un rem quede en 10 px */
     font-size: 62.5%; 
     background-color: white;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     scroll-behavior: smooth;
 }
 
@@ -30,3 +30,7 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+
+  video::-webkit-media-controls {
+    display: none !important;
+}
