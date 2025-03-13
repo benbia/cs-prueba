@@ -126,6 +126,11 @@ footer {
                 text-decoration: none;
                 color: $amarillo;
                 font-weight: 400;
+                
+            }
+
+            a:hover {
+                color: rgba($color: $amarillo, $alpha: 0.8) ;
             }
         }
 
@@ -177,7 +182,14 @@ footer {
     font-family: "Poppins", sans-serif;
     font-size: 1.75rem;
     font-weight: 600;
+
     
+    
+}
+
+.socio-footer:hover {
+    background-color: rgba($color: $amarillo, $alpha: 0.9);
+    color: rgba($color: white, $alpha: 0.9);
 }
 
 .newsletter {
@@ -223,6 +235,31 @@ footer {
         color: rgba($color: $bordo, $alpha: 0.5);
         
     }
+
+    input[type=submit]:focus {
+        background-color: rgba($color: $amarillo, $alpha: 0.7);
+        border: none;
+        outline: none;
+    }
+
+    input[type=submit] {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: rgba($color: $amarillo, $alpha: 1);
+
+        background-color: rgba($color: $bordo, $alpha: 0.9);
+        border: 1px solid $amarillo;
+        border-radius: 50px;
+        padding: 1rem 2rem;
+
+
+    }
+
+    input[type=submit]:hover {
+        background-color: rgba($color: $amarillo, $alpha: 0.3);
+    }
+    
 
 }
 

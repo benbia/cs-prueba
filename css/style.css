@@ -111,6 +111,9 @@ footer .contacto ul a {
   color: #f7b643;
   font-weight: 400;
 }
+footer .contacto ul a:hover {
+  color: rgba(247, 182, 67, 0.8);
+}
 footer .contacto .redes {
   margin-bottom: 2.5rem;
   display: flex;
@@ -151,6 +154,11 @@ footer .contacto .redes a {
   font-weight: 600;
 }
 
+.socio-footer:hover {
+  background-color: rgba(247, 182, 67, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .newsletter {
   margin-top: 4rem;
   border-top: 0.5px solid #f7b643;
@@ -184,6 +192,24 @@ footer .contacto .redes a {
   font-size: 1.2rem;
   font-weight: 200;
   color: rgba(115, 13, 50, 0.5);
+}
+.newsletter input[type=submit]:focus {
+  background-color: rgba(247, 182, 67, 0.7);
+  border: none;
+  outline: none;
+}
+.newsletter input[type=submit] {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #f7b643;
+  background-color: rgba(115, 13, 50, 0.9);
+  border: 1px solid #f7b643;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+}
+.newsletter input[type=submit]:hover {
+  background-color: rgba(247, 182, 67, 0.3);
 }
 
 .sponsors .logo-sponsors {
