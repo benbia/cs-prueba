@@ -180,6 +180,11 @@ nav {
     display: none;
 }
 
+.deportes-submenu .show2,
+.club-submenu .show1 {
+    grid-template-rows: 1fr;
+}
+
 
 // media q
 
@@ -190,7 +195,7 @@ nav {
         box-shadow: none;
     
     }
-    
+
     .cerrar {
         font-size: 2.5rem;
         color: $amarillo;

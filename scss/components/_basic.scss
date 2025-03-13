@@ -54,6 +54,10 @@ p {
     .quote-mark {
         color: $bordo;
         font-size: 3.5rem;
+
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
     }
     
     p {
@@ -90,6 +94,11 @@ p {
     align-items: center;
     margin-bottom: 2rem;
 
+    @media screen and (max-width: 767px) {
+        img {
+            display: none;
+        }
+    }
     
 }
 
@@ -170,6 +179,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding-bottom: 2rem;
+    gap: 4rem;
 }
 
 .boton-socios {
@@ -294,6 +304,27 @@ footer {
     }
 }
 
-@media screen and (max-width: 1280px) {
-    
+// celulares
+
+@media screen and (max-width: 770px) {
+
+    footer {
+        padding: 2.5rem 3rem;
+        .info-footer {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 2rem;
+        }
+
+        
+    }
+
+    .sponsors {
+        .logo-sponsors {
+            img {
+                max-height: 30px;
+            }
+        }
+    }
+
 }

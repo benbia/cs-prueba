@@ -32,6 +32,17 @@ menuCloseBtn.onclick = function() {
 navLinks.style.top = "-100%";
 }
 
+// sidebar submenu open close js code
+let htmlcssArrow = document.querySelector(".club-arrow");
+htmlcssArrow.onclick = function() {
+navLinks.classList.toggle("show1");
+}
+
+let jsArrow = document.querySelector(".deportes-arrow");
+jsArrow.onclick = function() {
+navLinks.classList.toggle("show2");
+}
+
 
 // newsletter
 
