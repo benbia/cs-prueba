@@ -29,7 +29,7 @@ menuOpenBtn.onclick = function() {
 navLinks.style.top = "0";
 }
 menuCloseBtn.onclick = function() {
-navLinks.style.top = "-100%";
+navLinks.style.top = "-200%";
 }
 
 // sidebar submenu open close js code
