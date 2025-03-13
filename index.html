@@ -29,13 +29,22 @@
     
     <!-- navbar -->
     <header>
-        <nav class="nav">
+        <div class="nav-mobile">
             <a href="#"><img src="./img/logo-cs.png" alt="" class="img-inicio"></a>
+            <i class='bx bx-menu menu-icon'></i>
+        </div>
+
+        <nav class="nav">
+
+            <div class="cerrar-div">
+                <a href="#"><img src="./img/logo-cs.png" alt="" class="img-inicio"></a>
+                <i class='bx bx-x cerrar'></i>
+            </div>
 
             <ul class="navbar-ul">
                 <li class="item-navbar"><a href="#">INICIO</a></li>
-                <li class="item-navbar">CLUB
-                    <i class='bx bx-chevron-down arrow club-arrow'></i>
+                <li class="item-navbar item-con-dropdown">
+                    <div class="dw-title">CLUB<i class='bx bx-chevron-down arrow club-arrow'></i></div>
                     <ul class="submenu club-submenu">
                         <div>
                             <li><a href="#">Comisión Directiva</a></li>
@@ -47,8 +56,8 @@
                         
                     </ul>
                 </li>
-                <li class="item-navbar">DEPORTES
-                    <i class='bx bx-chevron-down arrow deportes-arrow'></i>
+                <li class="item-navbar item-con-dropdown">
+                    <div class="dw-title">DEPORTES <i class='bx bx-chevron-down arrow deportes-arrow'></i></div>
                     <ul class="submenu deportes-submenu">
                         <div>
                             <li><a href="#">Básquetbol</a></li>
@@ -158,10 +167,11 @@
     
                 <div class="newsletter">
                     <h4>Suscríbete a nuestro boletín</h4>
-                    <form action="" method="post">
-                        <input type="email"  placeholder="Correo electrónico" class="email-form">
+                    <form id="newsletter-form">
+                        <input type="email" id="email" placeholder="Correo electrónico" class="email-form" required>
                         <input type="submit" value="Enviar">
                     </form>
+                    <p id="message"></p>
                 </div>
             </div>
         </div>
