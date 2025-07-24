@@ -433,7 +433,7 @@ nav .navbar-ul li a :hover {
 }
 
 i.cerrar,
-i.menu-icon {
+i.menu-icon, .arrow {
   background: none !important;
   outline: none;
   box-shadow: none;
@@ -442,7 +442,7 @@ i.menu-icon {
 i.cerrar:focus,
 i.menu-icon:focus,
 i.cerrar:active,
-i.menu-icon:active {
+i.menu-icon:active, .arrow {
   background: none !important;
   outline: none;
   box-shadow: none;
