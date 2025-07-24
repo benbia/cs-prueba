@@ -20,6 +20,19 @@ window.addEventListener('scroll', () => {
     }
 })
 
+// hacer que el video no se pueda moveer ni tocar:
+const video = document.querySelector('.back-video');
+
+// Prevenir pausa
+video.addEventListener('pause', () => {
+  video.play();
+});
+
+// Opcional: evitar que se pause al tocar
+video.addEventListener('touchstart', (e) => {
+  e.preventDefault();
+});
+
 // hamburguer menu
 
 let navLinks = document.querySelector(".nav");
