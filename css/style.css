@@ -401,6 +401,10 @@ nav .navbar-ul li a :hover {
   grid-template-rows: 1fr;
 }
 
+.cerrar {
+  display: none;
+}
+
 @media screen and (max-width: 1280px) {
   .header-scrolled {
     background-color: transparent;
@@ -409,6 +413,7 @@ nav .navbar-ul li a :hover {
   .cerrar {
     font-size: 2.5rem;
     color: #f7b643;
+    display: block;
   }
   .nav {
     padding: 2.5rem 0rem;

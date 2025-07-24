@@ -22,6 +22,8 @@ window.addEventListener('scroll', () => {
 
 // hacer que el video no se pueda moveer ni tocar:
 const video = document.querySelector('.back-video');
+video.muted = true;
+video.play();
 
 // Prevenir pausa
 video.addEventListener('pause', () => {

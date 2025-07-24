@@ -189,6 +189,10 @@ nav {
     grid-template-rows: 1fr;
 }
 
+.cerrar {
+    display: none;
+}
+
 
 // media q
 
@@ -203,6 +207,7 @@ nav {
     .cerrar {
         font-size: 2.5rem;
         color: $amarillo;
+        display: block;
     }
 
     .nav {
