@@ -38,7 +38,7 @@ p {
 }
 @media screen and (max-width: 990px) {
   p {
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
   }
 }
 
