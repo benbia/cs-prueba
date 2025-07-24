@@ -169,10 +169,23 @@ nav {
 
 //arrow dropdown que gire :)
 
-.navbar-ul li:hover .deportes-arrow,
-.navbar-ul li:hover .club-arrow {
+
+  .navbar-ul li:hover .deportes-submenu,
+  .navbar-ul li:hover .club-submenu {
+    grid-template-rows: 1fr;
+    background-color: rgba($color: $bordo, $alpha: 0.85);
+  }
+
+  .navbar-ul li:hover .deportes-arrow,
+  .navbar-ul li:hover .club-arrow {
     transform: rotate(180deg);
-}
+  }
+
+  .deportes-submenu .show2,
+    .club-submenu .show1 {
+    grid-template-rows: 1fr;
+    }
+
 
 // hamburguer menu
 
@@ -184,13 +197,26 @@ nav {
     display: none;
 }
 
-.deportes-submenu .show2,
-.club-submenu .show1 {
-    grid-template-rows: 1fr;
-}
+
 
 .cerrar {
-    display: none;
+    display: none !important;
+}
+
+i.cerrar,
+i.menu-icon {
+  background: none !important;
+  outline: none;
+  box-shadow: none;
+}
+
+i.cerrar:focus,
+i.menu-icon:focus,
+i.cerrar:active,
+i.menu-icon:active {
+  background: none !important;
+  outline: none;
+  box-shadow: none;
 }
 
 
@@ -207,7 +233,7 @@ nav {
     .cerrar {
         font-size: 2.5rem;
         color: $amarillo;
-        display: block;
+        display: block !important;
     }
 
     .nav {

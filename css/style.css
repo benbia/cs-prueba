@@ -36,6 +36,11 @@ p {
   font-weight: 300;
   margin-bottom: 1.5rem;
 }
+@media screen and (max-width: 990px) {
+  p {
+    font-size: 1.6rem;
+  }
+}
 
 .quote {
   display: flex;
@@ -46,6 +51,11 @@ p {
   border-top: 0.5px solid #730d32;
   border-bottom: 0.5px solid #730d32;
   margin: 3rem 0;
+}
+@media screen and (max-width: 990px) {
+  .quote {
+    font-size: 1.6rem;
+  }
 }
 .quote .quote-mark {
   color: #730d32;
@@ -119,6 +129,11 @@ footer .contacto {
   font-size: 1.8rem;
   color: #f7b643;
   font-weight: 300;
+}
+@media screen and (max-width: 990px) {
+  footer .contacto {
+    font-size: 1.6rem;
+  }
 }
 footer .contacto ul {
   padding-left: 3rem;
@@ -248,6 +263,12 @@ footer .contacto .redes a {
 .sponsors .logo-sponsors img {
   max-height: 50px;
   opacity: 0.7;
+}
+
+.no-seleccionable {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 @media screen and (max-width: 770px) {
@@ -383,9 +404,20 @@ nav .navbar-ul li a :hover {
   background-color: rgba(115, 13, 50, 0.85);
 }
 
+.navbar-ul li:hover .deportes-submenu,
+.navbar-ul li:hover .club-submenu {
+  grid-template-rows: 1fr;
+  background-color: rgba(115, 13, 50, 0.85);
+}
+
 .navbar-ul li:hover .deportes-arrow,
 .navbar-ul li:hover .club-arrow {
   transform: rotate(180deg);
+}
+
+.deportes-submenu .show2,
+.club-submenu .show1 {
+  grid-template-rows: 1fr;
 }
 
 .menu-icon {
@@ -396,13 +428,24 @@ nav .navbar-ul li a :hover {
   display: none;
 }
 
-.deportes-submenu .show2,
-.club-submenu .show1 {
-  grid-template-rows: 1fr;
+.cerrar {
+  display: none !important;
 }
 
-.cerrar {
-  display: none;
+i.cerrar,
+i.menu-icon {
+  background: none !important;
+  outline: none;
+  box-shadow: none;
+}
+
+i.cerrar:focus,
+i.menu-icon:focus,
+i.cerrar:active,
+i.menu-icon:active {
+  background: none !important;
+  outline: none;
+  box-shadow: none;
 }
 
 @media screen and (max-width: 1280px) {
@@ -413,7 +456,7 @@ nav .navbar-ul li a :hover {
   .cerrar {
     font-size: 2.5rem;
     color: #f7b643;
-    display: block;
+    display: block !important;
   }
   .nav {
     padding: 2.5rem 0rem;

@@ -36,6 +36,12 @@ p {
     font-weight: 300;
 
     margin-bottom: 1.5rem;
+
+    @media screen and (max-width: 990px) {
+        font-size: 1.6rem;
+    }
+
+
 }
 
 .quote {
@@ -49,6 +55,10 @@ p {
     border-bottom: 0.5px solid $bordo;
 
     margin: 3rem 0;
+
+    @media screen and (max-width: 990px) {
+        font-size: 1.6rem;
+    }
 
 
     .quote-mark {
@@ -132,6 +142,10 @@ footer {
         font-size: 1.8rem;
         color: $amarillo;
         font-weight: 300;
+
+        @media screen and (max-width: 990px) {
+        font-size: 1.6rem;
+        }
         
         ul {
             padding-left: 3rem;
@@ -305,6 +319,11 @@ footer {
     }
 }
 
+.no-seleccionable{
+    user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+}
 // celulares
 
 @media screen and (max-width: 770px) {
