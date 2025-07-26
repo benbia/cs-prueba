@@ -398,28 +398,26 @@ nav .navbar-ul li a :hover {
   color: rgba(115, 13, 50, 0.9);
 }
 
-.navbar-ul li:hover .deportes-submenu,
-.navbar-ul li:hover .club-submenu {
-  grid-template-rows: 1fr;
-  background-color: rgba(115, 13, 50, 0.85);
+@media screen and (min-width: 1281px) {
+  .navbar-ul li:hover .deportes-submenu,
+  .navbar-ul li:hover .club-submenu {
+    grid-template-rows: 1fr;
+    background-color: rgba(115, 13, 50, 0.85);
+  }
+  .navbar-ul li:hover .deportes-submenu,
+  .navbar-ul li:hover .club-submenu {
+    grid-template-rows: 1fr;
+    background-color: rgba(115, 13, 50, 0.85);
+  }
+  .navbar-ul li:hover .deportes-arrow,
+  .navbar-ul li:hover .club-arrow {
+    transform: rotate(180deg);
+  }
+  .deportes-submenu .show2,
+  .club-submenu .show1 {
+    grid-template-rows: 1fr;
+  }
 }
-
-.navbar-ul li:hover .deportes-submenu,
-.navbar-ul li:hover .club-submenu {
-  grid-template-rows: 1fr;
-  background-color: rgba(115, 13, 50, 0.85);
-}
-
-.navbar-ul li:hover .deportes-arrow,
-.navbar-ul li:hover .club-arrow {
-  transform: rotate(180deg);
-}
-
-.deportes-submenu .show2,
-.club-submenu .show1 {
-  grid-template-rows: 1fr;
-}
-
 .menu-icon {
   display: none !important;
 }
@@ -446,6 +444,14 @@ i.menu-icon:active, .arrow {
   background: none !important;
   outline: none;
   box-shadow: none;
+}
+
+* {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid #f7b643;
 }
 
 @media screen and (max-width: 1280px) {
@@ -511,7 +517,6 @@ i.menu-icon:active, .arrow {
     margin-top: 0;
     top: 0;
     width: 100% !important;
-    background-color: rgba(247, 182, 67, 0.3);
   }
   .submenu li {
     background-color: rgba(247, 182, 67, 0.12);

@@ -153,13 +153,14 @@ nav {
     color: rgba($color: $bordo, $alpha: 0.9);
 }
 
-//dropdown
+//dropdown solo en desktop
 
-.navbar-ul li:hover .deportes-submenu,
-.navbar-ul li:hover .club-submenu{
-    grid-template-rows: 1fr;
-    background-color: rgba($color: $bordo, $alpha: 0.85);
- }
+@media screen and (min-width: 1281px) {
+    .navbar-ul li:hover .deportes-submenu,
+    .navbar-ul li:hover .club-submenu{
+        grid-template-rows: 1fr;
+        background-color: rgba($color: $bordo, $alpha: 0.85);
+    }
 
 //arrow dropdown que gire :)
 
@@ -179,6 +180,9 @@ nav {
     .club-submenu .show1 {
     grid-template-rows: 1fr;
     }
+}
+
+
 
 
 // hamburguer menu
@@ -211,6 +215,14 @@ i.menu-icon:active, .arrow {
   background: none !important;
   outline: none;
   box-shadow: none;
+}
+
+* {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid $amarillo; // o el color que quieras mostrar SOLO si se navega con teclado
 }
 
 
@@ -298,8 +310,6 @@ i.menu-icon:active, .arrow {
        top: 0;
 
        width: 100% !important;
-
-       background-color: rgba($color: $amarillo, $alpha: 0.3);
 
        li {
         background-color: rgba($color: $amarillo, $alpha: 0.12);

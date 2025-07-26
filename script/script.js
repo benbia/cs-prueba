@@ -58,6 +58,62 @@ jsArrow.onclick = function() {
 navLinks.classList.toggle("show2");
 }
 
+// header mobile menu
+
+// Espera a que el DOM esté listo
+document.addEventListener("DOMContentLoaded", function () {
+  // Función para verificar si estamos en mobile
+  function isMobile() {
+    return window.innerWidth <= 1280;
+  }
+
+  const dropdowns = document.querySelectorAll(".item-con-dropdown");
+
+  dropdowns.forEach((item) => {
+    const trigger = item.querySelector(".dw-title"); // el texto clickable
+    const arrow = item.querySelector(".arrow");
+    const submenu = item.querySelector(".submenu");
+
+    const toggleSubmenu = () => {
+      if (!isMobile()) return; // SOLO mobile
+
+      const isOpen = submenu.classList.contains("open");
+
+      // Cerrar todos los submenús
+      document.querySelectorAll(".submenu.open").forEach((openMenu) => {
+        openMenu.classList.remove("open");
+        openMenu.style.gridTemplateRows = "0fr";
+        const arrowEl = openMenu.parentElement.querySelector(".arrow");
+        if (arrowEl) arrowEl.style.transform = "rotate(0deg)";
+      });
+
+      // Abrir el submenu actual si no estaba abierto
+      if (!isOpen) {
+        submenu.classList.add("open");
+        submenu.style.gridTemplateRows = "1fr";
+        arrow.style.transform = "rotate(180deg)";
+      }
+    };
+
+    // Agregar listeners al texto y a la flechita
+    trigger?.addEventListener("click", toggleSubmenu);
+    arrow?.addEventListener("click", toggleSubmenu);
+  });
+
+  // Si redimensionás a desktop, cerrá todo
+  window.addEventListener("resize", () => {
+    if (!isMobile()) {
+      document.querySelectorAll(".submenu").forEach((el) => {
+        el.classList.remove("open");
+        el.style.gridTemplateRows = "0fr";
+      });
+      document.querySelectorAll(".arrow").forEach((el) => {
+        el.style.transform = "rotate(0deg)";
+      });
+    }
+  });
+});
+
 
 // newsletter
 
