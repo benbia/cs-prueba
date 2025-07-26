@@ -470,7 +470,7 @@ i.menu-icon:active, .arrow {
     flex-direction: column;
     background-color: #730d32;
     width: 100%;
-    max-height: 100vh;
+    height: 100vh;
     overflow-y: auto !important;
     z-index: 20001;
     justify-content: start;
@@ -517,6 +517,7 @@ i.menu-icon:active, .arrow {
     margin-top: 0;
     top: 0;
     width: 100% !important;
+    z-index: 0 !important;
   }
   .submenu li {
     background-color: rgba(247, 182, 67, 0.12);
@@ -550,6 +551,23 @@ i.menu-icon:active, .arrow {
   .header-scrolled-mobile {
     background-color: #730d32;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+@media screen and (max-width: 990px) and (orientation: landscape) {
+  .nav {
+    height: auto !important;
+    max-height: 100dvh;
+    overflow-y: auto !important;
+  }
+  .submenu {
+    position: relative !important;
+    width: 100% !important;
+    z-index: 1;
+    margin-bottom: 1rem;
+  }
+  .navbar-ul {
+    height: auto;
+    overflow-y: auto;
   }
 }
 * {

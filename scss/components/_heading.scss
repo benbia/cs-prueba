@@ -248,7 +248,7 @@ i.menu-icon:active, .arrow {
         flex-direction: column;
         background-color: $bordo;
         width: 100%;
-        max-height: 100vh;
+        height: 100vh;
         overflow-y: auto !important;
         z-index: 20001;
 
@@ -258,6 +258,8 @@ i.menu-icon:active, .arrow {
         top: -200%;
         
     }
+
+    
 
     .cerrar-div {
         padding: 0 2.5rem;
@@ -310,6 +312,7 @@ i.menu-icon:active, .arrow {
        top: 0;
 
        width: 100% !important;
+       z-index: 0 !important;
 
        li {
         background-color: rgba($color: $amarillo, $alpha: 0.12);
@@ -353,4 +356,24 @@ i.menu-icon:active, .arrow {
     
     }
     
+}
+
+@media screen and (max-width: 990px) and (orientation: landscape) {
+
+    .nav {
+        height: auto !important; // Permite que crezca más allá de la altura de pantalla
+        max-height: 100dvh;      // Pero se limita para evitar que se desborde
+        overflow-y: auto !important; // Habilita el scroll si se pasa del max
+    }
+    .submenu {
+        position: relative !important;
+        width: 100% !important;
+        z-index: 1; // asegúrate de que esté por debajo del menú principal si se superpone
+        margin-bottom: 1rem; // espacio para que no quede pegado
+    }
+
+    .navbar-ul {
+        height: auto;
+        overflow-y: auto;
+    }
 }
