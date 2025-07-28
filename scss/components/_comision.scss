@@ -1,0 +1,67 @@
+.comision {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding-top: 2rem;
+
+    @media screen and (max-width: 990px) {
+        justify-content: center;
+    }
+}
+
+.persona-comision {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    width: 15%;
+
+    @media screen and (max-width: 1280px) {
+        width: 23%;
+    }
+
+    @media screen and (max-width: 990px) {
+        width: 45%;
+    }
+
+    @media screen and (max-width: 450px) {
+        width: 95%;
+    }
+
+    border-radius: 50px;
+    background: #ffffff;
+    box-shadow:  11px 11px 22px #e6e6e6,
+             -11px -11px 22px #ffffff;
+    
+    .icono {
+        border-radius: 50px;
+        background: #ffffff;
+        box-shadow: inset 6px 6px 12px #e6e6e6,
+            inset -6px -6px 12px #ffffff;
+        padding: 2rem;
+        i {
+            color: $bordo;
+            font-size: 2.8rem;
+        }
+    }
+
+    .datos-persona {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+        }
+
+
+    }
+}
+

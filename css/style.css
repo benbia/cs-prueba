@@ -11,6 +11,12 @@
     text-align: center;
   }
 }
+@media screen and (max-width: 990px) {
+  .h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+}
 
 .section-info {
   padding: 3.5rem;
@@ -27,6 +33,11 @@ h2 {
   font-weight: 700;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 1280px) {
+  h2 {
+    font-size: 2.8rem;
+  }
 }
 
 p {
@@ -345,6 +356,18 @@ footer .contacto .redes a {
   touch-action: none; /* Previene gestos táctiles */
 }
 
+.section-heading-pages {
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5%;
+}
+
 nav {
   width: 100%;
   position: fixed;
@@ -375,7 +398,7 @@ nav .navbar-ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.65rem;
+  font-size: 2rem;
   color: rgba(247, 182, 67, 0.8);
   font-weight: 750;
 }
@@ -412,7 +435,7 @@ nav .navbar-ul li a :hover {
   margin-top: 2rem;
   position: absolute;
   top: 70px;
-  z-index: 2;
+  z-index: 20;
   list-style: none;
   line-height: 40px;
   display: grid;
@@ -507,7 +530,7 @@ i.menu-icon:active, .arrow {
     width: 100%;
     height: 100vh;
     overflow-y: auto !important;
-    z-index: 20001;
+    z-index: 200001;
     justify-content: start;
     align-items: center;
     top: -200%;
@@ -552,7 +575,7 @@ i.menu-icon:active, .arrow {
     margin-top: 0;
     top: 0;
     width: 100% !important;
-    z-index: 0 !important;
+    z-index: 1 !important;
   }
   .submenu li {
     background-color: rgba(247, 182, 67, 0.12);
@@ -581,7 +604,7 @@ i.menu-icon:active, .arrow {
     display: inline-block !important;
     font-size: 3rem;
     color: #f7b643;
-    z-index: 10001;
+    z-index: 100001;
   }
   .header-scrolled-mobile {
     background-color: #730d32;
@@ -597,7 +620,7 @@ i.menu-icon:active, .arrow {
   .submenu {
     position: relative !important;
     width: 100% !important;
-    z-index: 1;
+    z-index: 10;
     margin-bottom: 1rem;
   }
   .navbar-ul {
@@ -605,6 +628,200 @@ i.menu-icon:active, .arrow {
     overflow-y: auto;
   }
 }
+header {
+  z-index: 100000;
+}
+
+.foto-directiva {
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../../img/foto-futfem.JPEG");
+}
+
+.comision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  padding-top: 2rem;
+}
+@media screen and (max-width: 990px) {
+  .comision {
+    justify-content: center;
+  }
+}
+
+.persona-comision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  width: 15%;
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 11px 11px 22px #e6e6e6, -11px -11px 22px #ffffff;
+}
+@media screen and (max-width: 1280px) {
+  .persona-comision {
+    width: 23%;
+  }
+}
+@media screen and (max-width: 990px) {
+  .persona-comision {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .persona-comision {
+    width: 95%;
+  }
+}
+.persona-comision .icono {
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: inset 6px 6px 12px #e6e6e6, inset -6px -6px 12px #ffffff;
+  padding: 2rem;
+}
+.persona-comision .icono i {
+  color: #730d32;
+  font-size: 2.8rem;
+}
+.persona-comision .datos-persona {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.persona-comision .datos-persona h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.persona-comision .datos-persona p {
+  font-size: 1.6rem;
+}
+
+.iframe-texto {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+@media screen and (max-width: 990px) {
+  .iframe-texto {
+    flex-direction: column;
+  }
+}
+.iframe-texto iframe {
+  border-radius: 30px;
+  border: 15px solid #f7b643;
+}
+@media screen and (max-width: 990px) {
+  .iframe-texto iframe {
+    width: 98%;
+    align-self: center;
+    margin-top: 2rem;
+  }
+}
+.iframe-texto ul {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: #730d32;
+  font-weight: 300;
+  padding-top: 2rem;
+  padding-left: 4rem;
+}
+@media screen and (max-width: 990px) {
+  .iframe-texto ul {
+    padding-left: 2rem;
+  }
+}
+@media screen and (max-width: 990px) {
+  .iframe-texto ul {
+    font-size: 1.6rem !important;
+  }
+}
+
+.doc {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.documento {
+  border-radius: 30px;
+  border: 15px solid #f7b643;
+  max-height: 100vh;
+}
+@media screen and (max-width: 990px) and (orientation: portrait) {
+  .documento {
+    max-height: 70vh;
+  }
+}
+
+.swiper-memorias {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2.8rem;
+  margin-bottom: 4rem;
+  z-index: 0 !important;
+}
+.swiper-memorias .swiper-wrapper {
+  height: auto;
+}
+.swiper-memorias .swiper-wrapper .swiper-slide {
+  height: auto;
+  box-sizing: border-box !important;
+  border-radius: 50px;
+  border-radius: 50px;
+  transition: all 200ms linear;
+  transform: scale(0.7);
+  opacity: 0.5;
+  margin-bottom: 8rem;
+  padding: 3rem;
+  background-color: #f7b643;
+  box-shadow: 7px 7px 14px #bbc6c7, -7px -7px 14px #ffffff;
+}
+.swiper-memorias .swiper-wrapper .swiper-slide.swiper-slide-active {
+  transform: scale(0.9);
+  opacity: 1;
+}
+@media screen and (max-width: 576px) {
+  .swiper-memorias .swiper-wrapper .swiper-slide {
+    width: 80%;
+  }
+}
+.swiper-memorias .swiper-pagination-bullet-active {
+  background-color: #730d32 !important;
+}
+
+.memoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem 0rem;
+}
+.memoria h2 {
+  font-size: 3rem;
+  padding: none;
+  margin-top: 0;
+}
+.memoria a {
+  text-decoration: none;
+  background-color: #730d32;
+  color: #f7b643;
+  padding: 1.5rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.memoria-actual {
+  border: 2px solid rgba(115, 13, 50, 0.8);
+}
+
 * {
   padding: 0;
   margin: 0;

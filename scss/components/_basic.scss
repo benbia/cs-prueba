@@ -9,6 +9,11 @@
         font-size: 6.2rem;
         text-align: center;
     }
+
+    @media screen and (max-width: 990px) {
+        font-size: 5rem;
+        text-align: center;
+    }
 }
 
 .section-info {
@@ -27,6 +32,10 @@ h2 {
     font-weight: 700;
     margin-top: 2rem;
     margin-bottom: 2rem;
+
+    @media screen and (max-width: 1280px) {
+        font-size: 2.8rem;
+    }
 }
 
 p {

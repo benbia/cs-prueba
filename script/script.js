@@ -22,18 +22,21 @@ window.addEventListener('scroll', () => {
 
 // hacer que el video no se pueda moveer ni tocar:
 const video = document.querySelector('.back-video');
-video.muted = true;
-video.play();
-
-// Prevenir pausa
-video.addEventListener('pause', () => {
+// solo si el video existe en la página (solo index)
+if (video) {
+  video.muted = true;
   video.play();
-});
 
-// Opcional: evitar que se pause al tocar
-video.addEventListener('touchstart', (e) => {
-  e.preventDefault();
-});
+  // Prevenir pausa
+  video.addEventListener('pause', () => {
+    video.play();
+  });
+
+  // Opcional: evitar que se pause al tocar
+  video.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+  });
+}
 
 // hamburguer menu
 
@@ -112,48 +115,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
-});
-
-
-// newsletter
-
-document.getElementById("newsletter-form").addEventListener("submit", async function (event) {
-    event.preventDefault(); // Evita que la página se recargue
-
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message");
-
-    if (!email) {
-        message.textContent = "Por favor, introduce un correo válido.";
-        message.style.display = "block";
-
-        // Ocultar el mensaje después de 3 segundos
-        setTimeout(() => {
-            message.style.display = "none";
-        }, 3000);
-
-
-        return;
-    }
-
-    try {
-        const response = await fetch("http://localhost:3000/subscribe", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ email }),
-        });
-
-        const data = await response.json();
-        message.textContent = data.message;
-    } catch (error) {
-        message.textContent = "Error al enviar el correo.";
-        message.style.display = "block";
-
-        // Ocultar el mensaje después de 3 segundos
-        setTimeout(() => {
-            message.style.display = "none";
-        }, 3000);
-    }
 });
