@@ -145,6 +145,7 @@
 .div-boton {
     display: flex;
     justify-content: center;
+    gap: 2rem;
 }
 .socio-boton {
     text-decoration: none;
@@ -160,3 +161,45 @@
     font-size: 2rem;
     font-weight: 600;
 }
+
+.div-categorias {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @media screen and (max-width: 990px) and (orientation: portrait) {   
+      flex-direction: column;
+      align-items: start;
+    }
+}
+
+label {
+   font-family: "Poppins", sans-serif;
+    font-size: 3.5rem;
+    color: $bordo;
+    font-weight: 700;
+
+    @media screen and (max-width: 1280px) {
+        font-size: 2.8rem;
+    }
+}
+
+#categorias {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    color: $bordo;
+    background-color: rgba($color: $amarillo, $alpha: 0.9);
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+
+    // para la flechita
+    appearance: none; /* Oculta la flecha nativa */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    @media screen and (max-width: 990px) and (orientation: portrait) {   
+       font-size: 1.5rem;
+    }
+}
+

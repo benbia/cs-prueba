@@ -19,6 +19,8 @@
 
     <!-- img icono -->
     <link rel="shortcut icon" href="../../img/logo-cs.png" type="image/x-icon">
+
+    <script defer src="./../script/script-beneficios.js"></script>
     
 </head>
 <body>
@@ -84,18 +86,29 @@
             <p class="extra-margin-bottom">Cada socio tiene una tarjeta de membresía del Club Seminario, con su nombre, apellido y cédula de identidad. La tarjeta es de uso personal e intransferible y el socio debe presentar la cédula de identidad para acceder a beneficios que van desde el 5 al 50% en rubros tan útiles y variados como gastronomía, servicio automotriz, catering, tecnología, veterinaria, hotelería, indumentaria, bienestar, estética y deporte, entre muchos otros.</p>
         </div>
         <div class="div-info">
-            <div class="socios">
-                <h2>Socio Colaborador</h2>
-                <p class="extra-margin-bottom">Si querés unirte como socio colaborador del Club Seminario, aportás mensualmente UYU $480 (cuatrocientos ochenta pesos uruguayos). Por ser parte de nuestra institución accedes a una tarjeta de membresía con más de 40 beneficios en comercios de diversos rubros.</p>
-                <div class="div-boton">
-                    <a target="_blank" href="https://forms.gle/S672snEbvEPWgfHm9" class="socio-boton">Hacete socio</a>
-                </div>
+
+            <div class="div-categorias">
+                <label for="categorias">Categoría: </label>
+                <select id="categorias" name="categorias">
+                    <option value="0" selected>Todas</option>
+                    <option value="1">Servicio Automotríz</option>
+                    <option value="2">Cuidado Personal</option>
+                    <option value="3">Educación</option>
+                    <option value="4">Gastronomía, pubs y confitería</option>
+                    <option value="5">Hogar y Oficina</option>
+                    <option value="6">Joyería</option>
+                    <option value="7">Mascotas</option>
+                    <option value="8">Niños</option>
+                    <option value="9">Salud</option>
+                    <option value="10">Servicio a deportistas</option>
+                    <option value="11">Servicios financieros</option>
+                    <option value="12">Turismo</option>
+                    <option value="13">Vestimenta, óptica y accesorios</option>
+                    
+                </select>
             </div>
 
-            <div class="socios">
-                <h2>Socio deportivo</h2>
-                <p>Si querés unirte a las actividades deportivas que desarrollamos en el Club, busca la disciplina de tu interés y contáctate con el referente. Por otras consultas escribí a <a href="mailto:secretaria@clubseminario.com.uy">secretaria@clubseminario.com.uy</a></p>
-            </div>
+            <div id="container" class="container"></div>
             
         </div>
 
@@ -142,7 +155,7 @@
         </div>
     </footer>   
     <!-- // en el inicio agregar vision mision valores + nuestro escudo + instalaciones -->
-
+    
 
 <script src="../../script/script.js"></script>
 
