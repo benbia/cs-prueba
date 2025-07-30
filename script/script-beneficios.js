@@ -3,10 +3,8 @@
 const beneficios = []
 const URL = "script/beneficios.json"
 
-const botonCarrito = document.querySelector("#boton-carrito")
-const container = document.getElementById("container")
-const inputBuscar = document.querySelector("input#input-search")
 
+const container = document.getElementById("container")
 const imagenLoading = `<img src="../img/loading.gif" alt="">`
 
 function retornarCardError () {
@@ -16,37 +14,24 @@ function retornarCardError () {
     </div>`
 }
 
-function mostrarCardHTML(arrayProductos) {
+function mostrarCardHTML(arrayBeneficios) {
     container.innerHTML = ""
 
-    arrayProductos.forEach(producto => {
-        container.innerHTML += `<div class="card card-shadow animate__animated animate__zoomIn ">
-        <div class="card-image"><img src= ${producto.img} alt="#"></div>
-        <div class="card-name">${producto.nombre}</div>
-        <div class="card-price">USD ${producto.precio}</div>
-        <button id="${producto.id}" class="card-comprar">Comprar</button>
-    </div>`
+    arrayBeneficios.forEach(beneficio => {
+        container.innerHTML += `<div class="beneficio">
+                    <div class="empresa">${}</div>
+                    <div class="datos-empresa">
+                        <h4>${}</h4>
+                        <p>${}</p>
+                    </div>
+                </div>`
     });
 
 }
 
-function activarBotonesCompra() {
-    const botonesComprar = document.querySelectorAll("button.card-comprar")
-    for (let boton of botonesComprar) {
-        boton.addEventListener("click", () => {
-            const productoElegido = productos.find((producto) => producto.id === parseInt(boton.id))
-            carrito.push(productoElegido)
-            localStorage.setItem("miCarrito", JSON.stringify(carrito))
-            notificar(productoElegido)
-        })
-        
-    }
-}
-
-function cargarProductos(arrayProductos) {
+function cargarBeneficios(arrayBeneficios) {
     if (arrayProductos.length > 0) {
-        mostrarCardHTML(arrayProductos)
-        activarBotonesCompra()
+        mostrarCardHTML(arrayBeneficios)
     } else {
         setTimeout(()=> {
             retornarCardError()
@@ -55,15 +40,15 @@ function cargarProductos(arrayProductos) {
 }
 
 
-async function obtenerProductos() {
+async function obtenerBeneficios() {
     try {
         const response = await fetch(URL)
         if(response.ok === true) {
             const data = await response.json() // encuentra el array de objetos y lo retorna como js (lo transforma de json a js)
             productos.push(...data)
-            cargarProductos(productos)
+            cargarBeneficios(beneficios)
         } else {
-            throw new Error("No se pudo obtener los productos " + "(" + response.status + ")")
+            throw new Error("No se encontraron resultados " + "(" + response.status + ")")
         }
         
     } catch (error) {
@@ -73,49 +58,7 @@ async function obtenerProductos() {
 
 obtenerProductos()
 
-// function obtenerProductos() { // como son todas cosas asincronicas espera a que se termine una para pasar a la otra, por eso el then
-//     fetch(URL)
-//     .then(response => {
-//         if(response.ok === true) {
-//             return response.json() // encuentra el array de objetos y lo retorna como js (lo transforma de json a js)
-//         } else {
-//             throw new Error("No se pudo obtener los productos " + "(" + response.status + ")")
-//         }
-//     }) 
-//     .then(data => productos.push(...data)) // los tres puntitos es para subir todos los objetos del array de una (ya estaba en js)
-//     .then(() => cargarProductos(productos))
-//     .catch(error => console.error(error)) // por si pasa algo con error --> comunmente no deberia verse solamente en la consola el error
-// }
 
-// obtenerProductos()
-
-// boton del carrito
-
-botonCarrito.addEventListener("mousemove", () => {
-    if (carrito.length > 1) {
-        botonCarrito.title = "Ir al Carrito"
-    } else {
-        botonCarrito.title = "No hay productos en el carrito"
-    }
-})
-
-function carritoVacio() {
-    Swal.fire({
-        icon:'warning',
-        title: "Debes agregar al menos un producto a tu carrito",
-        confirmButtonText: 'Entendido'
-    })
-}
-
-botonCarrito.addEventListener("click", () => {
-    if (carrito.length > 0) {
-        location.href = "checkout.html"
-    } else {
-        carritoVacio()
-    }
-})
-
-// busqueda
 
 inputBuscar.addEventListener("keypress", (e) => {
     if (e.key === "Enter" && inputBuscar.value.trim() !== "") {
@@ -132,27 +75,3 @@ inputBuscar.addEventListener("keypress", (e) => {
 inputBuscar.addEventListener("input", () => {
     inputBuscar.value.trim() == "" && cargarProductos(productos) // si se cumple lo de elvalor "" entonces... (operador logico &&)
 })
-
-
-// 
-
-/* 
-function filtrarPorMarca() {
-    let marcaAFiltrar = prompt("¿Qué marca deseas buscar?")
-
-    if(marcaAFiltrar !== null || marcaAFiltrar !== ""){
-        const itemsFiltrados = productos.filter(producto => producto.marca.toUpperCase() === marcaAFiltrar.trim().toUpperCase())
-        
-        if (itemsFiltrados.length > 0) {
-            console.table(itemsFiltrados)
-        } else {
-            console.warn("Disculpe no tenemos productos de esa marca")
-        }
-
-    } else {
-        console.alert("Porfavor ingrese una marca válida")
-    }
-    
-}
-
-*/

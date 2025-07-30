@@ -881,7 +881,7 @@ label {
   font-family: "Poppins", sans-serif;
   font-size: 2rem;
   color: #730d32;
-  background-color: rgba(247, 182, 67, 0.9);
+  background-color: rgba(247, 182, 67, 0.7);
   border: none;
   border-radius: 50px;
   padding: 1rem 2rem;
@@ -893,6 +893,69 @@ label {
   #categorias {
     font-size: 1.5rem;
   }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.beneficio {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  height: auto !important;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem;
+  background-color: rgba(247, 182, 67, 0.85);
+  padding: 3rem;
+  border-radius: 30px;
+  box-shadow: 7px 7px 14px #bbc6c7, -7px -7px 14px #ffffff;
+}
+@media screen and (max-width: 900px) {
+  .beneficio {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .beneficio {
+    width: 90%;
+  }
+}
+.beneficio h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: #730d32;
+  font-weight: 500;
+}
+.beneficio .empresa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.beneficio .empresa img {
+  max-width: 100%;
+  max-height: 70%;
+}
+.beneficio .empresa h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.3rem;
+  color: #730d32;
+  font-weight: 800;
+  margin: 0;
+  text-align: center;
+}
+.beneficio .datos-empresa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .swiper-memorias {
