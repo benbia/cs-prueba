@@ -296,6 +296,10 @@ footer .contacto .redes a {
   opacity: 0.6;
 }
 
+.extra-margin-bottom {
+  margin-bottom: 5rem;
+}
+
 .no-seleccionable {
   user-select: none;
   -webkit-user-select: none; /* Safari */
@@ -633,7 +637,7 @@ header {
 }
 
 .foto-directiva {
-  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../../img/foto-futfem.jpeg");
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../../img/foto-futfem.JPEG");
 }
 
 .comision {
@@ -810,6 +814,42 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.socios {
+  margin-bottom: 4rem;
+  padding: 4rem !important;
+  border-radius: 50px;
+  box-shadow: 7px 7px 14px #bbc6c7, -7px -7px 14px #ffffff;
+}
+.socios h2 {
+  margin: 0;
+  margin-bottom: 2rem;
+}
+.socios p a {
+  text-decoration: none;
+  color: #730d32;
+  font-weight: 500;
+  word-break: break-word; /* o break-all si querés cortar sin piedad */
+  overflow-wrap: break-word;
+}
+
+.div-boton {
+  display: flex;
+  justify-content: center;
+}
+
+.socio-boton {
+  text-decoration: none;
+  color: #f7b643;
+  background-color: #730d32;
+  padding: 1.3rem 2rem;
+  border-radius: 50px;
+  width: 100%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .swiper-memorias {
