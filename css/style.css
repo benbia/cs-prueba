@@ -905,7 +905,7 @@ label {
 }
 
 .beneficio {
-  width: 20%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   height: auto !important;
@@ -956,6 +956,25 @@ label {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+}
+
+.card-error {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.card-error p {
+  margin: 0;
+  color: rgba(115, 13, 50, 0.85);
+}
+.card-error i {
+  font-size: 2.7rem;
+  color: rgba(115, 13, 50, 0.85);
+}
+
+.loading-img {
+  height: 50px;
 }
 
 .swiper-memorias {

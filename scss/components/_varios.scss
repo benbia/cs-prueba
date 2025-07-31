@@ -213,7 +213,7 @@ label {
 }
 
 .beneficio {
-    width: 20%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     height: auto !important;
@@ -272,5 +272,26 @@ label {
 
     }
 
+}
+
+.card-error {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        margin: 0;
+        color: rgba($color: $bordo, $alpha: 0.85);
+    }
+
+    i {
+        font-size: 2.7rem;
+        color: rgba($color: $bordo, $alpha: 0.85);
+    }
+}
+
+.loading-img {
+    height: 50px;
 }
 
