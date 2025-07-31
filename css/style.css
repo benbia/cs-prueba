@@ -637,7 +637,7 @@ header {
 }
 
 .foto-directiva {
-  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../../img/foto-futfem.JPEG");
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/foto-futfem.JPEG");
 }
 
 .comision {
