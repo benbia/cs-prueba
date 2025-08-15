@@ -6,16 +6,16 @@
       "value": "3"
     },
     {
-      "empresa": "<h3>CANTEGRILL PUNTA DEL ESTE</h3>",
-      "descuento": "10% de descuento",
-      "nota": "En confitería",
-      "value": "4"
+      "empresa": "<h3>OMNIA Wellness</h3>",
+      "descuento": "Descuentos",
+      "nota": "",
+      "value": "2"
     },
     {
-      "empresa": "<h3>ON THE GO</h3>",
-      "descuento": "10% de descuento",
-      "nota": "En pedidos telefónicos",
-      "value": "4"
+      "empresa": "<h3>MS Recovery</h3>",
+      "descuento": "Descuentos",
+      "nota": "",
+      "value": "10"
     }
 
   ]
