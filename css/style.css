@@ -1045,6 +1045,100 @@ label {
   border: 2px solid rgba(115, 13, 50, 0.8);
 }
 
+.swiper-tecnicos {
+  width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2.8rem;
+  margin-bottom: 4rem;
+  z-index: 0 !important;
+}
+.swiper-tecnicos .swiper-wrapper {
+  height: auto;
+}
+.swiper-tecnicos .swiper-wrapper .swiper-slide {
+  height: auto;
+  box-sizing: border-box !important;
+  border-radius: 50px;
+  border-radius: 50px;
+  transition: all 200ms linear;
+  transform: scale(0.7);
+  opacity: 0.5;
+  margin-bottom: 8rem;
+  padding: 3rem;
+  background-color: rgba(247, 182, 67, 0.15);
+  box-shadow: 7px 7px 14px #bbc6c7, -7px -7px 14px #ffffff;
+}
+.swiper-tecnicos .swiper-wrapper .swiper-slide.swiper-slide-active {
+  transform: scale(0.9);
+  opacity: 1;
+}
+@media screen and (max-width: 576px) {
+  .swiper-tecnicos .swiper-wrapper .swiper-slide {
+    width: 80%;
+  }
+}
+.swiper-tecnicos .swiper-pagination-bullet-active {
+  background-color: #730d32 !important;
+}
+
+.tecnico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem 0rem;
+}
+.tecnico .icono i {
+  font-size: 4.5rem !important;
+  background-color: #730d32;
+  color: #f7b643;
+  padding: 5rem;
+  border-radius: 50%;
+  font-size: 2.2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.tecnico .datos {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  gap: 1.2rem;
+}
+.tecnico .datos .dato {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 1.6rem;
+  color: #730d32;
+}
+.tecnico .datos .dato i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  color: #730d32;
+  background-color: #f7b643;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.tecnico .datos .dato p {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: #730d32;
+}
+
 * {
   padding: 0;
   margin: 0;
