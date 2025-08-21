@@ -637,7 +637,60 @@ header {
 }
 
 .foto-directiva {
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/foto-directiva.jpg");
+}
+
+.foto-cupra {
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/foto-cupra.jpg");
+}
+
+.foto-socios {
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/foto-socios.jpg");
+}
+
+.foto-beneficios {
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/foto-beneficios.jpg");
+}
+
+.foto-memorias {
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/foto-memorias.jpg");
+}
+
+.foto-estatuto {
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/foto-estatuto.jpg");
+}
+
+.foto-reglamento {
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/foto-reglamento.jpg");
+}
+
+.foto-corredores {
+  background-position: top center;
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/Corredores.jpg");
+}
+
+.foto-basket {
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/PapiBasket.JPG");
+}
+
+.foto-futbol {
   background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/foto-futfem.JPEG");
+}
+
+.foto-hb {
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/HB Femenino.jpg");
+}
+
+.foto-hockey {
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/Hockey.jpg");
+}
+
+.foto-rugby {
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/Rugby.jpg");
+}
+
+.foto-voley {
+  background-image: linear-gradient(rgba(115, 13, 50, 0.5), rgba(115, 13, 50, 0.8)), url("../img/MamiVolley.jpg");
 }
 
 .comision {
@@ -779,6 +832,49 @@ header {
   .disciplina .info-disciplina {
     flex-direction: column;
     gap: 3rem;
+  }
+}
+
+.disciplina-con-img {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+.disciplina-con-img .img-disciplina {
+  width: 100%; /* ocupa todo el ancho disponible */
+  max-width: 250px;
+  max-height: 250px; /* tamaño máximo */
+  aspect-ratio: 1/1; /* 🔑 asegura que siempre sea un cuadrado */
+  border-radius: 50%; /* lo hace círculo */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+  border: 9px solid #f7b643;
+}
+@media screen and (max-width: 990px) {
+  .disciplina-con-img .img-disciplina {
+    display: none;
+  }
+}
+.disciplina-con-img .img-disciplina img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* recorta la imagen sin deformar */
+}
+.disciplina-con-img p {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: #730d32;
+  font-weight: 300;
+  margin: 0;
+  text-align: justify;
+}
+@media screen and (max-width: 990px) {
+  .disciplina-con-img p {
+    font-size: 1.6rem !important;
   }
 }
 
