@@ -16,6 +16,12 @@
       "descuento": "Descuentos",
       "nota": "",
       "value": "10"
+    },
+    {
+      "empresa": "<img src='../img/logo-nb.png' alt=''>",
+      "descuento": "20% de descuento",
+      "nota": "Presentando la tarjeta de socio",
+      "value": "13"
     }
 
   ]
